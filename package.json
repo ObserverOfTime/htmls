@@ -1,17 +1,27 @@
 {
-  "name": "htmls",
+  "name": "@observeroftime/htmls",
   "version": "0.4.0",
   "description": "HyperText Markup LiveScript!",
-  "author": "Daiz <taneli.vatanen@gmail.com>",
+  "author": {
+    "name": "Daiz",
+    "email": "taneli.vatanen@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "ObserverOfTime",
+      "email": "chronobserver@disroot.org",
+      "url": "https://github.com/ObserverOfTime"
+    }
+  ],
   "license": "MIT",
-  "main": "./lib/index.js",
+  "main": "lib/index.js",
   "dependencies": {
     "LiveScript": "~1.3.1",
     "prelude-ls": "~1.2.1"
   },
   "devDependencies": {
     "shelljs": "~0.8.5",
-    "chai": "~4.3.7",
+    "chai": "~4.3.10",
     "mocha": "~10.2.0"
   },
   "scripts": {
@@ -20,10 +30,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Daiz-/htmls.git"
+    "url": "git+https://github.com/ObserverOfTime/htmls.git"
   },
   "bugs": {
-    "url": "https://github.com/Daiz-/htmls/issues"
+    "url": "https://github.com/ObserverOfTime/htmls/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "keywords": [
     "livescript",
