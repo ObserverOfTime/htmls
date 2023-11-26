@@ -1,6 +1,6 @@
 # HTMLS - HyperText Markup LiveScript!
 
-Inspired by HTML templating engines like [jade](http://jade-lang.com/), I got an idea - *"Could I make a template engine that uses proper [LiveScript](http://livescript.net) code as templates?"*
+Inspired by HTML templating engines like [pug](https://pugjs.org/), I got an idea - *"Could I make a template engine that uses proper [LiveScript](http://livescript.net) code as templates?"*
 
 What you see here is the outcome of said idea - a functional (HTML5) templating engine that, as originally visioned, uses proper LiveScript code as its templates.
 
@@ -11,7 +11,7 @@ What you see here is the outcome of said idea - a functional (HTML5) templating 
 You can get HTMLS via npm:
 
 ```bash
-$ npm install htmls
+$ npm install @chronobserver/htmls
 ```
 
 ## Example
@@ -78,7 +78,7 @@ Usage of HTMLS is quite straightforward. You load the module, you call it with a
 
 ```javascript
 // JavaScript
-var htmls = require('htmls');
+var htmls = require('@chronobserver/htmls');
 var templateText = 'p "Hello, #@!"';
 var templateFunc = htmls(templateCode);
 var html = templateFunc("John Smith"); // <p>Hello, John Smith!</p> 
@@ -86,7 +86,7 @@ var html = templateFunc("John Smith"); // <p>Hello, John Smith!</p>
 
 ```livescript
 # LiveScript
-require! \htmls
+require! \@chronobserver/htmls
 template-text = 'p "Hello, #@!"'
 template-func = htmls template-text
 html = template-func "John Smith" # <p>Hello, John Smith!</p>
