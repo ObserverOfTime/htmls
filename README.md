@@ -95,7 +95,5 @@ html = template-func "John Smith" # <p>Hello, John Smith!</p>
 ## Writing Templates
 
 - You can only use valid HTML5 element names.
-- It's probably a good idea not to use HTML5 element names as variable names in your templates. Something will likely break.
-- Regular LiveScript may or may play nice inside your templates. Everything should be fine if you stick to stuff like for loops and ifs though, which should be more than enough for basic templating purposes, right?
 - Arguments are accessed via `this` or `@` for short.
 - If you want plain text output inside an element, use the `$` function as seen in the example above.

@@ -67,7 +67,6 @@ compile-xml = (code, output = "#base\n") ->
   common-compile code, output
 
 module.exports = compile <<< {
-  compile
   compile-html
   compile-xml
 }

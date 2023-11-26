@@ -2,7 +2,7 @@ should = require \chai .should!
 htmls = require \../src/index
 read = require \../read
 load = -> {
-  tmpl: htmls.compile read "./test/templates/#it.ls"
+  tmpl: htmls read "./test/templates/#it.ls"
   html: read "./test/output/#it.html"
   pretty: read "./test/output/#{it}_pretty.html"
 }
