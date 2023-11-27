@@ -1,29 +1,18 @@
 should = require \chai .should!
-htmls = require \../src/index
-read = require \../read
-load = -> {
-  tmpl: htmls read "./test/templates/#it.ls"
-  html: read "./test/output/#it.html"
-  pretty: read "./test/output/#{it}_pretty.html"
-}
+load = require \./load
 
 suite 'HTML templates' !->
 
   test 'should support doctype, simple tags and string content' !->
-    {tmpl, html, pretty} = load \plain
+    {tmpl, html, pretty} = load \plain \html
 
-    tmpl {}
-    .should.equal html
+    tmpl {} .should.equal html
 
-    tmpl {} {+pretty}
-    .should.equal pretty
+    tmpl {} {+pretty} .should.equal pretty
 
   test 'should work with simple for loops' !->
-    {tmpl, html, pretty} = load \simple-loop
+    {tmpl, html, pretty} = load \simple-loop \html
 
-    tmpl {number: 3}
-    .should.equal html
+    tmpl {number: 3} .should.equal html
 
-    tmpl {number: 3} {+pretty}
-    .should.equal pretty
-
+    tmpl {number: 3} {+pretty} .should.equal pretty

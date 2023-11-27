@@ -1,6 +1,6 @@
 {
   "name": "@chronobserver/htmls",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "description": "HyperText Markup LiveScript!",
   "author": {
     "name": "Daiz",
@@ -48,7 +48,9 @@
   ],
   "mocha": {
     "ui": "tdd",
+    "exclude": "load.ls",
     "require": "LiveScript",
-    "reporter": "spec"
+    "reporter": "spec",
+    "parallel": true
   }
 }
