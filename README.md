@@ -78,10 +78,10 @@ Usage of HTMLS is quite straightforward. You load the module, you call it with a
 
 ```javascript
 // JavaScript
-var htmls = require('@chronobserver/htmls');
-var templateText = 'p "Hello, #@!"';
-var templateFunc = htmls(templateCode);
-var html = templateFunc("John Smith"); // <p>Hello, John Smith!</p> 
+const htmls = require('@chronobserver/htmls');
+const templateText = 'p "Hello, #@!"';
+const templateFunc = htmls(templateText);
+const html = templateFunc('John Smith'); // <p>Hello, John Smith!</p>
 ```
 
 ```livescript
@@ -89,11 +89,11 @@ var html = templateFunc("John Smith"); // <p>Hello, John Smith!</p>
 require! \@chronobserver/htmls
 template-text = 'p "Hello, #@!"'
 template-func = htmls template-text
-html = template-func "John Smith" # <p>Hello, John Smith!</p>
+html = template-func 'John Smith' # <p>Hello, John Smith!</p>
 ```
-
 ## Writing Templates
 
 - You can only use valid HTML5 element names.
-- Arguments are accessed via `this` or `@` for short.
-- If you want plain text output inside an element, use the `$` function as seen in the example above.
+- You should not use HTML5 element names as variable names.
+- Arguments are accessed via `this.` or `@` for short.
+- Use the `$` function for plain text output inside an element.
