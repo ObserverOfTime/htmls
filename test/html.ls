@@ -1,5 +1,5 @@
-should = require \chai .should!
 load = require \./load
+require \chai .should!
 
 suite 'HTML templates' !->
 

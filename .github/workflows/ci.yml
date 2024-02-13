@@ -2,8 +2,8 @@ name: Test & publish package
 
 on:
   push:
-    branches: ['*']
-    tags: ['*']
+    branches: ["*"]
+    tags: ["*"]
 
 jobs:
   ci:
@@ -17,7 +17,7 @@ jobs:
       - name: Set up NodeJS
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: "20"
           registry-url: https://registry.npmjs.org/
       - name: Install packages
         run: npm ci
